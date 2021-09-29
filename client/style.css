@@ -1,20 +1,46 @@
-.centre {
-    margin-left: 500px;
-}
 
 #newPost {
-    margin-top: 50px;
+    margin-left: 20px;
 }
 
+#post {
+    margin-left: 10px; 
+}
 #submit { 
     margin-top: 20px;
     width: 100px;
 }
 
-.col{
-    padding: 10px;
-}
 
 #submit[type='text']{
-    font-size: small;
+    font-weight: bold;
+}
+
+input[type=text]{
+    border: none;
+    outline: none;
+}
+
+#title[type=text]{
+    font-size: 30px;
+}
+
+#story[type=text]{
+    font-size: 20px;
+}
+
+#name[type=text]{
+    font-size: 15px;
+}
+
+#pubTitle{
+    font-size: 30px;
+}
+
+#pubName{
+    font-size: 15px;
+}
+
+#pubStory{
+    font-size: 25px;  
 }
