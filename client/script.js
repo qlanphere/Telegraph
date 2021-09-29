@@ -7,6 +7,8 @@ const submit = document.getElementById('submit')
 
 submit.addEventListener('click', (e) => post(e))
 
+window.addEventListener('hashchange', updateContent);
+
 async function post(e) {
 
     e.preventDefault()
@@ -49,6 +51,10 @@ function inject (title,fullName,story) {
 
     const form = document.getElementById('post')
 
+    while(form.firstChild) {
+        form.firstChild.remove()
+    }
+
     const postTitle = document.createElement('h1')
     const postName = document.createElement('p')
     const postStory = document.createElement('h2')
@@ -61,4 +67,20 @@ function inject (title,fullName,story) {
     form.appendChild(postName)
     form.appendChild(postStory)
 
+}
+
+function updateContent(){
+    let hash = window.location.hash.substring(1);
+    
+    let url = `${host}:${port}/posts/${hash}`
+
+    fetch(url)
+    .then((r) => r.json())
+    .then((data) => {
+        let title = data.title
+        let name = data.name
+        let story = data.story
+
+        inject(title,name,story)
+    })
 }
