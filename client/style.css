@@ -1,3 +1,20 @@
 .centre {
     margin-left: 500px;
 }
+
+#newPost {
+    margin-top: 50px;
+}
+
+#submit { 
+    margin-top: 20px;
+    width: 100px;
+}
+
+.col{
+    padding: 10px;
+}
+
+#submit[type='text']{
+    font-size: small;
+}

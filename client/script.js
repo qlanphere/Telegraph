@@ -50,7 +50,7 @@ function inject (title,fullName,story) {
     const form = document.getElementById('post')
 
     const postTitle = document.createElement('h1')
-    const postName = document.createElement('h2')
+    const postName = document.createElement('p')
     const postStory = document.createElement('h2')
 
     postTitle.textContent = title
@@ -60,7 +60,5 @@ function inject (title,fullName,story) {
     form.appendChild(postTitle)
     form.appendChild(postName)
     form.appendChild(postStory)
-
-    
 
 }
