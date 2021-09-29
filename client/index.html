@@ -10,23 +10,32 @@
     <title>Document</title>
 </head>
 <body>
-    <div class = "container">
-        <div class = "row justify-content-md-center">
-            <div class = "col col-lg-2">
-                <input type="text">
+    <div id="post" class="container">
+        <div class = "col">
+            <div id = "pubTitle" class = "row-1 mt-3">
+                
             </div>
-            <div class = "col-md-auto offset-md-3">
-                <input type="button" value = "submit">
+            <div id = "pubName" class = "row-1 mt-2">
+                
             </div>
-        </div>
-        <div class = "row justify-content-md-center">
-            <div class = "col-md-auto">
-                <input type="text">
+            <div id = "pubStory" class = "row-1 mt-2">
+                
             </div>
         </div>
-        <div class = "row justify-content-md-center">
-            <div class = "col-md-auto">
-                <input type="text">
+    </div>
+    <div id = "newPost" class = "container">
+        <div class = "col">
+            <div class = "row-1 mt-3">
+                <input id = "title" type="text" placeholder="Title" >
+            </div>
+            <div class = "row-1 mt-2">
+                <input id = "name" type="text" placeholder="Your name">
+            </div>
+            <div class = "row-1 mt-2">
+                <input id = "story" type="text"placeholder="Your story...">
+            </div>
+            <div class = "row-1">
+                <input type="button" class = "btn btn-light btn-outline-dark rounded border-2" id = "submit" value = "PUBLISH">
             </div>
         </div>
     </div>

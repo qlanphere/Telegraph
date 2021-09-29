@@ -6,3 +6,4 @@ CREATE TABLE posts (
     name varchar(255) NOT NULL,
     story varchar(255) NOT NULL
 );
+
