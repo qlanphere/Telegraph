@@ -38,10 +38,7 @@ async function post(e) {
       try {
     const response = await fetch(url, options)
     await response.json()
-
-    
-    }
-    catch (error) {
+} catch (error) {
         console.log(error);
     }
 }
@@ -49,23 +46,24 @@ async function post(e) {
 function inject (title,fullName,story) {
     document.getElementById('newPost').style.display="none"
 
-    const form = document.getElementById('post')
+    const postTitle = document.getElementById('pubTitle')
+    const postName = document.getElementById('pubName')
+    const postStory = document.getElementById('pubStory')
+    const postView = document.createElement('button')
 
-    while(form.firstChild) {
-        form.firstChild.remove()
-    }
+    const newSection = document.querySelector('col')
 
-    const postTitle = document.createElement('h1')
-    const postName = document.createElement('p')
-    const postStory = document.createElement('h2')
+    postTitle.textConent = ''
+    postName.textContent = ''
+    postStory.textContent = ''
 
     postTitle.textContent = title
     postName.textContent = fullName
     postStory.textContent = story
 
-    form.appendChild(postTitle)
-    form.appendChild(postName)
-    form.appendChild(postStory)
+    newSection.appendChild(postView)
+
+
 
 }
 
